@@ -1,0 +1,181 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #004F4D;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#outer__container {
+    background: #A68F97;
+    width: 60%;
+    margin: auto;
+}
+
+#inner__container {
+    padding: 20px;
+}
+
+#app__heading {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+}
+
+#app__heading h1 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    color: #1F2024;
+}
+
+#form__section {
+    margin-top: 12px;
+}
+
+.input__container {
+    /* background: green; */
+    padding: 12px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #000;
+}
+
+.input__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input__field label {
+    margin-bottom: 6px;
+    color: #004F4D;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+#input__desc input::placeholder {
+    color: #4B4952;
+    font-size: 0.9rem;
+}
+
+.input__field input, select {
+    background: none;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #1F2024;
+}
+
+#input__2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+#input__desc {
+    /* background: cyan; */
+}
+
+#input__category {
+    /* background: blue; */
+    padding-right: 6px;
+    border-right: 1px solid #000;
+}
+
+#input__date {
+    /* background: cyan; */
+    padding-left: 6px;
+}
+
+#action__buttons {
+    /* background: cyan; */
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 6px !important;
+    border-bottom: 1px solid #000;
+    /* margin-bottom: 6px; */
+}
+
+#action__buttons button {
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    color: #F2E7DC;
+    cursor: pointer;
+}
+
+#action__buttons button i {
+    margin-right: 6px;
+}
+
+#submit__btn {
+    justify-self: end;
+}
+
+#submit__btn button {
+    background: #4B4952;
+}
+
+#delete__btn button {
+    background: #D92525;
+}
+
+#tasklist__section {
+    /* background: cyan; */
+    padding: 0 12px;
+}
+
+.tasklist__task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: blue; */
+    padding: 12px 0;
+    border-bottom: 1px solid #000;
+}
+
+.task__1 {
+    display: flex;
+    column-gap: 12px;
+}
+
+.task__1 input {
+    transform: scale(1.2);
+}
+
+.markText {
+    text-decoration: line-through;
+    color: #D92525;
+    font-weight: 300;
+}
+
+.desc__text {
+    color: #1F2024;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.desc__date {
+    color: #4B4952;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.desc__date i {
+    margin-right: 6px;
+}
+
+.task__2 p {
+    font-size: 1rem;
+    font-weight: 500;
+    background: #004F4D;
+    width: 10rem;
+    padding: 6px 18px;
+    color: #F2E7DC;
+    text-align: center;
+}

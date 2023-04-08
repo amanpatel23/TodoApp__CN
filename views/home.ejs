@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App | Home</title>
+
+    <script src="https://kit.fontawesome.com/d51660f56d.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/home.css" />
+</head>
+<body>
+    
+    <div id="outer__container">
+        <div id="inner__container">
+
+            <!-- app heading -->
+            <div id="app__heading">
+                <h1>TODO App</h1>
+            </div>
+
+            <!-- app form section -->
+            <div id="form__section">
+                <form method="POST">
+                    <div class="input__container" id="input__1">
+                        <div class="input__field" id="input__desc">
+                            <label for="todoDesc">DESCRIPTION</label>
+                            <input type="text" placeholder="what's your goal today?" autocomplete="off" id="todoDesc" name="todoDesc" required>
+                        </div>
+                    </div>
+                    <div class="input__container" id="input__2">
+                        <div class="input__field" id="input__category">
+                            <label for="todoCategory">CATEGORY</label>
+                            <select id="todoCategory" name="todoCategory" required>
+                            <option value="Personal">Personal</option>
+                            <option value="CodingNinjas">CodingNinjas</option>
+                            <option value="College">College</option>
+                            <option value="Girlfriend(404)">Girlfriend(404)</option>
+                            </select>
+                        </div>
+
+                        <div class="input__field" id="input__date">
+                            <label for="todoDueDate">DUE DATE</label>
+                            <input type="date" id="todoDueDate" name="todoDueDate" required>
+                        </div>
+                    </div>
+
+                    <div id="action__buttons">
+                        <div id="submit__btn">
+                            <button type="submit" formaction="/add-todo">
+                                <i class="fa-solid fa-plus"></i>ADD TASK
+                            </button>
+                        </div>
+                        <div id="delete__btn">
+                            <button type="button">
+                                <i class="fa-solid fa-trash"></i>DELETE TASKS
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- app task lists section -->
+            <div id="tasklist__section">
+                <% for (let item of todoData) { %>
+                    <% const isChecked = item.isTaskChecked %>
+                    <div class="tasklist__task">
+                        <div class="task__1">
+                            <input type="checkbox" id="<%= item._id %>" <%= isChecked ? 'checked' : '' %>>
+                            <label class="<%= isChecked ? 'markText' : '' %>" for="<%= item._id %>">
+                                <div class="task__desc">
+                                    <p class="desc__text"><%= item.todoDesc %></p>
+                                    <p class="desc__date"><i class="fa-solid fa-calendar-days"></i><%= item.todoDueDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="task__2">
+                            <p class="task__category"><%= item.todoCategory %></p>
+                        </div>
+                    </div>
+    
+                <% } %>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/javascript/home.js"></script>
+</body>
+</html>
