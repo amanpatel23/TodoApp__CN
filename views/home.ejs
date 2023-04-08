@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App | Home</title>
 
+    <!-- adding fontawesome -->
     <script src="https://kit.fontawesome.com/d51660f56d.js" crossorigin="anonymous"></script>
 
+    <!-- adding google fonts(font: Raleway) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;800&display=swap" rel="stylesheet">
 
+    <!-- linking css file -->
     <link rel="stylesheet" href="/css/home.css" />
 </head>
 <body>
     
+    <!-- outcer container div -->
     <div id="outer__container">
+        <!-- inner container div -->
         <div id="inner__container">
 
             <!-- app heading -->
@@ -26,13 +31,17 @@
 
             <!-- app form section -->
             <div id="form__section">
+                <!-- form for adding todo item details -->
                 <form method="POST">
+                    <!-- input filed for adding todo desc text -->
                     <div class="input__container" id="input__1">
                         <div class="input__field" id="input__desc">
                             <label for="todoDesc">DESCRIPTION</label>
                             <input type="text" placeholder="what's your goal today?" autocomplete="off" id="todoDesc" name="todoDesc" required>
                         </div>
                     </div>
+
+                    <!-- input field for selecting the category -->
                     <div class="input__container" id="input__2">
                         <div class="input__field" id="input__category">
                             <label for="todoCategory">CATEGORY</label>
@@ -41,9 +50,11 @@
                             <option value="CodingNinjas">CodingNinjas</option>
                             <option value="College">College</option>
                             <option value="Girlfriend(404)">Girlfriend(404)</option>
+                            <option value="Other">Other</option>
                             </select>
                         </div>
 
+                        <!-- input field for selecting the due date -->
                         <div class="input__field" id="input__date">
                             <label for="todoDueDate">DUE DATE</label>
                             <input type="date" id="todoDueDate" name="todoDueDate" required>
@@ -51,11 +62,14 @@
                     </div>
 
                     <div id="action__buttons">
+                        <!-- button for submitting the form data -->
                         <div id="submit__btn">
                             <button type="submit" formaction="/add-todo">
                                 <i class="fa-solid fa-plus"></i>ADD TASK
                             </button>
                         </div>
+
+                        <!-- button for deleting the todo item -->
                         <div id="delete__btn">
                             <button type="button">
                                 <i class="fa-solid fa-trash"></i>DELETE TASKS
@@ -67,6 +81,7 @@
 
             <!-- app task lists section -->
             <div id="tasklist__section">
+                <!-- loop through all the todoItems and view it on the screen-->
                 <% for (let item of todoData) { %>
                     <% const isChecked = item.isTaskChecked %>
                     <div class="tasklist__task">
@@ -89,6 +104,7 @@
         </div>
     </div>
     
+    <!-- linking the javascript file -->
     <script type="text/javascript" src="/javascript/home.js"></script>
 </body>
 </html>

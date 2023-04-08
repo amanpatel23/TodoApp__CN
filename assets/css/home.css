@@ -1,9 +1,12 @@
+
+/* adding default styling */
 *, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* styling body */
 body {
     font-family: 'Raleway', sans-serif;
     background: #004F4D;
@@ -12,12 +15,14 @@ body {
     overflow-x: hidden;
 }
 
+/* styling the outer container */
 #outer__container {
     background: #A68F97;
     width: 60%;
     margin: auto;
 }
 
+/* styling the inner container */
 #inner__container {
     padding: 20px;
 }
@@ -26,10 +31,11 @@ body {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid #000;
+    padding-bottom: 6px;
 }
 
 #app__heading h1 {
-    font-weight: 600;
+    font-weight: 800;
     font-size: 2.8rem;
     color: #1F2024;
 }
@@ -38,8 +44,8 @@ body {
     margin-top: 12px;
 }
 
+/* styling all the input container */
 .input__container {
-    /* background: green; */
     padding: 12px;
     margin-bottom: 6px;
     border-bottom: 1px solid #000;
@@ -50,6 +56,7 @@ body {
     flex-direction: column;
 }
 
+/* styling input field labels */
 .input__field label {
     margin-bottom: 6px;
     color: #004F4D;
@@ -76,29 +83,24 @@ body {
     justify-content: space-between;
 }
 
-#input__desc {
-    /* background: cyan; */
-}
-
+/* styling the dropdown menu */
 #input__category {
-    /* background: blue; */
     padding-right: 6px;
     border-right: 1px solid #000;
 }
 
+/* styling the date picker */
 #input__date {
-    /* background: cyan; */
     padding-left: 6px;
 }
 
+/* sytling the buttons */
 #action__buttons {
-    /* background: cyan; */
     padding: 12px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 6px !important;
     border-bottom: 1px solid #000;
-    /* margin-bottom: 6px; */
 }
 
 #action__buttons button {
@@ -126,15 +128,14 @@ body {
 }
 
 #tasklist__section {
-    /* background: cyan; */
     padding: 0 12px;
 }
 
+/* styling each item of the todoItems list */
 .tasklist__task {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background: blue; */
     padding: 12px 0;
     border-bottom: 1px solid #000;
 }
@@ -144,22 +145,29 @@ body {
     column-gap: 12px;
 }
 
+.task__1:hover, .task__1 input:hover, .task__desc:hover {
+    cursor: pointer;
+}
+
 .task__1 input {
     transform: scale(1.2);
 }
 
+/* styling when the task is checked */
 .markText {
     text-decoration: line-through;
     color: #D92525;
     font-weight: 300;
 }
 
+/* styling the todo item desc text */
 .desc__text {
     color: #1F2024;
     font-weight: 600;
     font-size: 1rem;
 }
 
+/* styling the todo item due date */
 .desc__date {
     color: #4B4952;
     font-size: 0.8rem;
