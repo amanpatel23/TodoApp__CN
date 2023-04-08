@@ -3,7 +3,8 @@
 const mongoose = require('mongoose');
 
 // Connect to a MongoDB database at the given URL using the Mongoose connect method
-mongoose.connect('mongodb://127.0.0.1/todoapp_db').then(() => {
+const address = 'mongodb+srv://amanpatel23:amanpatel@cluster0.wthkym3.mongodb.net/?retryWrites=true&w=majority'
+mongoose.connect(address).then(() => {
     console.log('Connected to MongoDB');
 }).catch((error) => {
     console.log(`Error connecting to MongoDB: ${error}`);
