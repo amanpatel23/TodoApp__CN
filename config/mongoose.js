@@ -4,8 +4,8 @@ require('dotenv').config();
 // Import the Mongoose module and connect to a MongoDB database
 const mongoose = require('mongoose');
 
-const username = process.env.DB_USER;
-const password = process.env.DB_PASSWORD;
+const username = 'amanpatel23'
+const password = 'amanpatel';
 
 // Connect to a MongoDB database at the given URL using the Mongoose connect method
 const address = `mongodb+srv://${username}:${password}@cluster0.wthkym3.mongodb.net/?retryWrites=true&w=majority`
