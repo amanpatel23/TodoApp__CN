@@ -5,8 +5,9 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 
 // Connect to a MongoDB database at the given URL using the Mongoose connect method
-const address = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.wthkym3.mongodb.net/?retryWrites=true&w=majority`
-mongoose.connect(address, {
+// const address = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.wthkym3.mongodb.net/?retryWrites=true&w=majority`
+const _address = `mongodb+srv://amanpatel23:amanpatel@cluster0.q6zrnoe.mongodb.net/?retryWrites=true&w=majority`
+mongoose.connect(_address, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
